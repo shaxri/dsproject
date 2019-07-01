@@ -1,0 +1,69 @@
+<ion-view style="" class=" " id="page10" title="Fight Room">
+    <ion-content class="has-header" padding="true">
+  <div class="list">
+ 
+
+   <center>
+      
+       <img src='{{user_extras2.image}}' width="100px" height="100%" style="border: 2px solid #1ea3ff;
+border-radius: 50%;
+padding: 3px;"   />
+             
+    </center>
+    <center><h4 ng-if="user_other==1 user_my != 0">
+      
+
+    حجر </h4>
+    <h4 ng-if="user_other==2 user_my != 0">
+      
+
+    ورقة </h4>
+     <h4 ng-if="user_other==3 user_my != 0">
+      
+
+    مقص </h4>
+     
+     </center>
+    
+</div>
+<center><h1>VS</h1></center>
+<center><h4 ng-if="user_my==1 && user_other != 0">
+      
+
+    حجر </h4>
+    <h4 ng-if="user_my==2 user_other != 0">
+      
+
+    ورقة </h4>
+     <h4 ng-if="user_my==3 user_other != 0">
+      
+
+    مقص </h4>
+     
+     </center>
+<div class="list">
+
+    <center>
+      
+       <img src='{{user_extras.image}}' width="100px" height="100%" style="border: 2px solid #1ea3ff;
+border-radius: 50%;
+padding: 3px;"   />
+            
+             
+    </center>
+ 
+  
+<div class="button-bar">
+  <button class="" ng-class="class" id="d1" ng-click="do1()" >حجر</button>
+  <button class="" ng-class="class2" id="d2" ng-click="do2()">ورقة</button>
+  <button class="" ng-class="class3" id="d3" ng-click="do3()">مقص</button>
+</div>
+
+      <center><button class="" ng-class="class4" id="d4" ng-click="AllcallAtTimeout()">النتيجة</button>
+      <button class="button button-balanced" id="mainmenu"   ui-sref="menu2"  >العودة لساحة القتال</button>
+      
+   </center>
+</div>
+   
+    </ion-content>
+</ion-view>

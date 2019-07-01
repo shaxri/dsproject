@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+	<!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+<script src="js/ng-cordova.min.js"></script>
+    
+	<!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+ <link href="css/timeline.css" rel="stylesheet">
+
+		    <script src="js/jquery-1.12.2.js?VersionNumber"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<!--=========================================#1. Custom Header Part====================================-->
+ 
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <!-- Ionic Meterial Header-->
+	<script src="lib/ionic-material/dist/ionic.material.min.js"></script>
+  <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+	<link href="lib/ionic-material/dist/ionic.material.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=RobotoDraft%3A400%2C500%2C700%2C400italic" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <!--Firebase Header-->
+  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+   apiKey: "AIzaSyC0NN7S8h1xDG370mhQbR862ghqrXfyVow",
+    authDomain: "jordanfight-819a4.firebaseapp.com",
+    databaseURL: "https://jordanfight-819a4.firebaseio.com",
+    storageBucket: "jordanfight-819a4.appspot.com",
+    messagingSenderId: "202095053155"
+
+
+  };
+  firebase.initializeApp(config);
+</script>
+
+<!--======================================================================================================-->
+
+  <script>
+  function previewFile(){
+       var preview = document.getElementById('imag'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();
+  </script>
+
+    <style type="text/css">
+      .platform-ios .manual-ios-statusbar-padding{
+        padding-top:20px;
+      }
+      .manual-remove-top-padding{
+        padding-top:0px;
+      }
+      .manual-remove-top-padding .scroll{
+        padding-top:0px !important;
+      }
+      ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+        margin-left:-10px;
+        margin-right:-10px;
+      }
+      ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+        border-radius:0px;
+        border-left:0px;
+        border-right: 0px;
+      }
+    </style>
+	
+    <!-- rounded progrssbar for timer on player -->
+    <script src="lib/angular-svg-round-progressbar/roundProgress.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlgRIj0KXiA3ds2c6QzT8Kcjz_9_GfO5s"></script>
+  <script src="https://code.angularjs.org/1.3.15/angular.js"></script>
+   <script src="https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.js"></script>
+ 
+
+
+
+  </head>
+  <body ng-app="app" animation="slide-left-right-ios7">
+  <div style="">
+
+    <!--#5. indexCtrl -->
+    <ion-side-menus  ng-controller="indexCtrl" data-componentid="side-menu21" style="" enable-menu-with-back-views="false">
+        <ion-side-menu-content  >
+            <ion-nav-bar class="bar-assertive" >
+<!--
+                <ion-nav-back-button></ion-nav-back-button>-->
+
+
+                <ion-nav-buttons side="left">
+                    <!-- #3.  $root.extras -->
+                    <button ng-if="$root.extras" class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                    </button>
+                </ion-nav-buttons>
+
+                <!--<ion-nav-buttons side="right">
+               
+                  <button  class="button button-icon button-clear ion-compose" ui-sref="lastOrders" ></button>
+                   
+                  
+                </ion-nav-buttons>-->
+
+            </ion-nav-bar>
+            <ion-nav-view></ion-nav-view>
+        </ion-side-menu-content>
+
+        <!-- #3.  $root.extras -->
+        <ion-side-menu side="left" id="side-menu21" ng-if="$root.extras">
+
+            <ion-header-bar class="expanded">
+			 <img src='{{user_extras.image}}' class="avatar motion spin fade">
+           
+             
+              <div class="menu-bottom">
+                {{user_info.displayName}}
+				</br>
+				${{user_extras.points}}
+				
+              </div>
+            </ion-header-bar>
+
+           <ion-content class="stable-bg has-expanded-header">
+                <ion-list data-componentid="list1" class=" " id="menu-list1">
+
+                    <ion-item data-componentid="list-item1" style="" menu-close="" ui-sref="menu2" id="menu-list-item1" class="item-icon-left  ">
+                        <i class="icon ion-ios-home-outline"></i>Home</ion-item>
+                 
+              
+              
+                    <ion-item data-componentid="list-item5" style="" menu-close="" ui-sref="settings" id="menu-list-item5" class="item-icon-left  ">
+                        <i class="icon ion-ios-gear-outline"></i>Profile</ion-item>
+                
+                    <ion-item ng-click="logout()" data-componentid="list-item7" style="" id="menu-list-item7" class="item-icon-left  ">
+                        <i class="icon ion-log-out"></i> Logout</ion-item>
+                </ion-list>
+            </ion-content>
+
+        </ion-side-menu>
+    </ion-side-menus>
+  </div>
+  </body>
+</html>

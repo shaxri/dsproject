@@ -1,0 +1,39 @@
+<ion-view style="" class=" " id="page6" title="Register">
+    <ion-content class="has-header" padding="true" style="background: url(img/bg1.jpg) center; background-size: cover;">
+        <form name="signupForm" class="list " id="signup-form2">
+            <ion-list class=" " id="signup-list3">
+
+		 <!--   <div class="app-icon"></div>  
+ -->
+              <label class="item item-input item-floating-label">
+                <span style="color: #fff;"  class="input-label">Name</span>
+                <input style="color: #fff;" ng-model="user.name" type="text" placeholder="Name">
+              </label>
+
+              <label class="item item-input item-floating-label">
+                <span style="color: #fff;" class="input-label">Phone</span>
+                <input style="color: #fff;" ng-model="user.phone" type="tel" placeholder="Phone">
+              </label>
+
+              <label class="item item-input item-floating-label">
+                  <span style="color: #fff;" class="input-label">الايميل</span>
+                  <input style="color: #fff;" ng-model="user.email" type="email" placeholder="الايميل">
+              </label>
+
+              <label class="item item-input item-floating-label">
+                  <span style="color: #fff;" class="input-label">Password</span>
+                  <input style="color: #fff;" ng-model="user.password" type="password" placeholder="Password">
+              </label>
+			  <br> </br>
+ <center><img src="" id="imag" width="100px"   alt="Picture"></center>
+	  	<label class="ace-file-input ace-file-multiple"><input multiple=""   onchange="previewFile()"id="id-input-file-3" type="file"><span class="ace-file-container" data-title="Upload Image"><span class="ace-file-name" data-title="No File ..."><i class=" ace-icon ace-icon fa fa-cloud-upload"></i></span></span><a class="remove" href="#"><i class=" ace-icon fa fa-times"></i></a></label>
+    
+		
+
+            </ion-list>
+            <div style="width: 279px; height: 35px;" class="spacer"></div>
+            <button ng-click="signupEmail(signupForm,user)" class=" button button-assertive  button-block  icon-left ion-ios-email-outline " style="border-radius:0px 0px 0px 0px;" id="signup-button3">التسجيل</button>
+          <!--   <button class=" button button-positive  button-block icon-left ion-social-facebook " style="border-radius:0px 0px 0px 0px;" id="signup-button4">SIGN UP WITH FACEBOOK</button> -->
+        </form>
+    </ion-content>
+</ion-view>

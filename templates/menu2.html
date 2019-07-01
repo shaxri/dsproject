@@ -1,0 +1,121 @@
+<ion-view style="" class=" " id="page7" title="Home">
+    <ion-content class="has-header" padding="false"     >
+  <div class="row">
+  <div class="col">
+ <div class="card">
+  <div class="item item-divider">
+  Area A
+  </div>
+  <div class="item item-text-wrap row">
+  <div ng-repeat="x in Allusers_A">
+    <img class="col-20"  ng-if="user_i!==x.$id"src="https://img.icons8.com/android/452/user.png" style="box-shadow: none;height: 50px;" />
+   <img class="col-20"  ng-if="user_i===x.$id" src="https://www.clker.com/cliparts/E/Q/i/T/i/G/red-user-icon-hi.png" style="box-shadow: none;height: 50px;" />
+    
+   
+    <br>
+    <span>{{x.name}}</span> 
+   <div   class="row">
+   <button  ng-if="user_i===x.$id" class="button icon-right ion-arrow-down-a button-calm col" ng-click="Move('C')">
+ 
+</button> 
+  <button ng-if="user_i===x.$id" class="button icon-right ion-arrow-right-a button-calm col" ng-click="Move('B')">
+ 
+</button>
+</div>
+    </div>
+    
+  </div>
+    
+   
+</div>
+  
+  </div>
+  <div class="col">
+    <div class="card">
+  <div class="item item-divider">
+  Area B
+  </div>
+    <div class="item item-text-wrap row">
+  <div ng-repeat="x in Allusers_B">
+      <img class="col-20"  ng-if="user_i!==x.$id"src="https://img.icons8.com/android/452/user.png" style="box-shadow: none;height: 50px;" />
+   <img class="col-20"  ng-if="user_i===x.$id" src="https://www.clker.com/cliparts/E/Q/i/T/i/G/red-user-icon-hi.png" style="box-shadow: none;height: 50px;" />
+    
+    <br>
+   <span>{{x.name}}</span> 
+   <br>
+     <div   class="row">
+   <button  ng-if="user_i===x.$id" class="button icon-right ion-arrow-down-a button-calm col" ng-click="Move('D')">
+ 
+</button> 
+  <button ng-if="user_i===x.$id" class="button icon-right ion-arrow-left-a button-calm col" ng-click="Move('A')">
+ 
+</button>
+</div>
+    </div>
+    
+  </div>
+  
+</div>
+  
+  </div>
+  
+</div>
+ <div class="row">
+  <div class="col">
+ <div class="card">
+  <div class="item item-divider">
+  Area C
+  </div>
+   <div class="item item-text-wrap row">
+  <div ng-repeat="x in Allusers_C">
+    <img class="col-20"  ng-if="user_i!==x.$id"src="https://img.icons8.com/android/452/user.png" style="box-shadow: none;height: 50px;" />
+   <img class="col-20"  ng-if="user_i===x.$id" src="https://www.clker.com/cliparts/E/Q/i/T/i/G/red-user-icon-hi.png" style="box-shadow: none;height: 50px;" />
+      <br>
+    <span>{{x.name}}</span>  
+   <br>
+  <div   class="row">
+   <button  ng-if="user_i===x.$id" class="button icon-right ion-arrow-up-a button-calm col" ng-click="Move('A')">
+ 
+</button> 
+  <button ng-if="user_i===x.$id" class="button icon-right ion-arrow-right-a button-calm col" ng-click="Move('D')">
+ 
+</button>
+</div>
+    </div>
+    
+  </div>
+  
+</div>
+  
+  </div>
+  <div class="col">
+    <div class="card">
+  <div class="item item-divider">
+  Area D
+  </div>
+  <div class="item item-text-wrap row">
+  <div ng-repeat="x in Allusers_D">
+    <img class="col-20"  ng-if="user_i!==x.$id"src="https://img.icons8.com/android/452/user.png" style="box-shadow: none;height: 50px;" />
+   <img class="col-20"  ng-if="user_i===x.$id" src="https://www.clker.com/cliparts/E/Q/i/T/i/G/red-user-icon-hi.png" style="box-shadow: none;height: 50px;" />
+     <br>
+  <span>{{x.name}}</span> 
+   <br>
+    <div   class="row">
+   <button  ng-if="user_i===x.$id" class="button icon-right ion-arrow-up-a button-calm col" ng-click="Move('B')">
+ 
+</button> 
+  <button ng-if="user_i===x.$id" class="button icon-right ion-arrow-left-a button-calm col" ng-click="Move('C')">
+   
+</button>
+</div>
+    </div>
+    
+  </div>
+  
+</div>
+  
+  </div>
+  
+</div>
+	</ion-content>
+</ion-view>
