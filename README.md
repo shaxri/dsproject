@@ -20,3 +20,5 @@ Bucket (List of items we pick)
 Offline Rules
 Can’t move on the board or pick gear without internet connection.
 10 min per round, the round starts when the first user makes a move.
+
+Little changes are made to test repo
